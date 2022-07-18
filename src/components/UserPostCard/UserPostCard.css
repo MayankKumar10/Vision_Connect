@@ -1,0 +1,97 @@
+.postCard-text-container {
+  display: flex;
+    padding: 0.5rem;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.postCard-text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.post-card-container {
+  border: 1px solid #eff3f4;
+}
+
+.post-card-text {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.post-card-avatar {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 110%;
+}
+
+.post-card-img-text{
+  display: flex;
+  padding-right: 1rem;
+  justify-content: space-between;
+}
+
+.user-card-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.user-card-avatar {
+  max-width: 3rem;
+  max-height: 3rem;
+  aspect-ratio: 1/1;
+}
+
+.verification-icon {
+  color: var(--twitter-icons-cl);
+  width: 6%;
+}
+
+.user-card-text {
+  text-align: initial;
+  width: 90%;
+}
+
+.user-card-img {
+  width: 90%;
+  border-radius: 1rem;
+}
+
+.user-post-icon-container {
+  display: flex;
+  justify-content: space-around;
+  color: #373737;
+  padding: 1rem;
+}
+
+.post-card-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  width: 13%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.icons1:hover {
+  color: var(--twitter-icons-cl);
+  background-color: var(--twitter-icons-bg);
+}
+
+.icons2:hover {
+  color: var(--twitter-icons-cl-retweet);
+  background-color: var(--twitter-icons-bg-retweet);
+}
+
+.icons3:hover {
+  color: var(--twitter-icons-cl-like);
+  background-color: var(--twitter-icons-bg-like);
+}

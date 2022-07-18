@@ -1,0 +1,60 @@
+.pd-l-1 {
+  padding-left: 1rem;
+}
+
+.commentCard-text-icon {
+  display: flex;
+  width: 60%;
+}
+
+.commentCard-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.postCard-text-container {
+  padding: 0 0.5rem;
+}
+
+.verification-icon1 {
+  width: 25%;
+}
+
+.comment-btn-container {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.comment-card-container {
+  padding: 1rem;
+  border-bottom: 2px solid #eff3f4;
+}
+
+.cmt-time-cont {
+  display: flex;
+}
+
+.cmt-time-text {
+  padding-right: 0.5rem;
+}
+
+.cmt-img-text {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+input[type="text"]:focus-visible {
+  outline: none;
+}
+
+.css-11lq3yg-MuiGrid-root {
+  align-items: center;
+  padding: 1rem;
+}
