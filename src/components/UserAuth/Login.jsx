@@ -35,7 +35,7 @@ export function Login() {
     console.log('res following', res)
 
     if (res?.payload.encodedToken) {
-     navigate('/home')
+     navigate('/')
     }
   };
 

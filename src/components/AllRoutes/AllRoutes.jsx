@@ -18,10 +18,6 @@ export const AllRoutes = () => {
     <>
     <Filter />
       <Routes>
-
-        {/* <Route element={<RestrictAuth />}>
-          <Route path="/" element={<HomePage />} />
-        </Route> */}
         
         <Route path='/' element={<RequireAuth />}>
           <Route path="/" element={<Home />} />
