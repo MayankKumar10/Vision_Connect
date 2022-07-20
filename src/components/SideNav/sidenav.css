@@ -1,0 +1,44 @@
+.SideNav-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-height: 80%;
+  background-color: var(--follow-cont-bg);
+}
+
+.sidenav-search-container {
+  background-color: var(--color-pureWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  height: 1.5em;
+  border-radius: 1.5em;
+  border: 1px solid #dbdbdb;
+}
+
+.search-container,
+.search-container:focus {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.button-transparent {
+  border: none;
+  background: transparent;
+}
+
+.css-mhc70k-MuiGrid-root {
+  padding: 1rem;
+  width: calc(100% + 4rem);
+  margin-left: -16px;
+}
