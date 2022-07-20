@@ -1,104 +1,70 @@
-<div align="center">
+# Getting Started with Create React App
 
-<img alt="Vision Connect logo" src="public/vision-icon.jpg" width="150px" height="150px" />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Vision Connect
+## Available Scripts
 
-![Forks](https://img.shields.io/github/forks/MayankKumar10/Vision_Connect)
-![Stars](https://img.shields.io/github/stars/MayankKumar10/Vision_Connect)
-![License](https://img.shields.io/github/license/MayankKumar10/Vision_Connect)
+In the project directory, you can run:
 
-</div>
+### `yarn start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 📕 Table of Contents
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- [About](#-about)
-- [Features It has](#-features-it-has)
-- [Features You will See in Future](#-features-you-will-see-in-future)
-- [Getting Started](#-getting-started)
-- [Connect with me](#-connect-with-me)
+### `yarn test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## 📖 About
+### `yarn build`
 
-## Vision Connect is social media platform to get to get connected to people having same interest.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 🚀 Features It has
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-**Filters**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Explore Page
-- Bookmark
-- liked Posts
-- Commented Posts
+### `yarn eject`
 
-  **Navbar**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- search by person
-- navigate to the person page
-- navigate to the Home page back, click on the Vision Icon in the left
-- Log In/Log Out
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-  - Sign Up by following the link provided on the Log In page
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-From **Home**
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- click on the post by your followed people to comment.
-- like / dislike posts
-- add post in your Bookmark Page
+## Learn More
 
-From **Post** Page
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- filter the Posts based on your preference. Vision gives filter options for
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-  - filter by latest
-  - filter by old
-  
-- add/remove posts in your bookmarks
-- add like/dislike posts
+### Code Splitting
 
-From **LikedPost** page
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- it will show your liked post
-- You will see your all liked post you can re-post theme from here as well. 
-- You can also remove posts from your liked post page
+### Analyzing the Bundle Size
 
-From **BookMarkedPost** page
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- If you liked some post you can save in your bookmarked page
-- You will see your all Bookmarked post you can re-post theme from here as well. 
-- You can also remove posts from your Bookmarked post page
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## 🔌 Getting Started
+### Advanced Configuration
 
-- clone the repository on your local machine with the command below in your terminal, and cd into the **react Vision Connect** folder
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```
-git clone https://github.com/MayankKumar10/Vision_Connect.git
+### Deployment
 
-cd react Vision Connect
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- install dependencies (if you are using **yarn** then do with that)
+### `yarn build` fails to minify
 
-```
-npm install
-```
-
-- create a `.env` file at the root level of the directory (at the level of `package.json`) and create a variable like mentioned below
-
-```
-REACT_APP_JWT_SECRET = <JWT_SECRET_KEY_OF_YOUR_CHOICE>
-```
-
-- start the server
-
-```
-npm start
-```
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

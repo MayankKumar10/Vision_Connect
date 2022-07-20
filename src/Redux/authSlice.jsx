@@ -77,7 +77,7 @@ export const signupUser = createAsyncThunk(
   },
 		[loginUser.rejected]: (state, { payload }) => {
 			state.authStatus = "rejected";
-			state.authError = payload.errors;
+			state.authError = payload?.errors;
 		},
 		[signupUser.pending]: (state) => {
 			state.authStatus = "loading";
