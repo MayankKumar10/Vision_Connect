@@ -9,7 +9,7 @@ import {
   MdNotifications,
 } from "react-icons/md";
 import { useSelector } from "react-redux";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import { useProfile } from "../../Redux";
 import {WishlistButton} from "../WishList/WishlistButton.styled";
 
@@ -22,7 +22,7 @@ export function Filter() {
       <nav className="filter-container col-3">
         <form className="form-container">
           <div className="videoLikeContainer filter-icons-container">
-            <Link to="/">
+            <NavLink to="/">
               <WishlistButton
                 className="material-icons-text card-wishlist-icons navImage navIcons buttonHoverShadow  flex-row-center"
                 onClick=""
@@ -31,12 +31,12 @@ export function Filter() {
                 <MdHome size="25" />
                 <p className="padding-l-1">Home</p>
               </WishlistButton>
-            </Link>
+            </NavLink>
           </div>
 
           <div className="videoLikeContainer">
-            <Link to="/explore"
-            state={{pageToShow: 'explore'}}>
+            <NavLink to="/explore"
+            state={{ pageToShow: 'explore' }}>
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
                 onClick=""
@@ -47,14 +47,14 @@ export function Filter() {
                 </div>
                 <p>Explore</p>
               </WishlistButton>
-            </Link>
+            </NavLink>
           </div>
 
         {user?.username !== null &&     
             <div className="videoLikeContainer">
-                <Link 
+                <NavLink 
                 to={`/profile/${user?.username}`} 
-                state={{pageToShow:`profile`}}>
+                state={{ pageToShow: `profile` }}>
                   <WishlistButton
                     className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
                     onClick=""
@@ -63,12 +63,12 @@ export function Filter() {
                     <MdFavorite size="25" />
                     <p className="padding-l-1">Profile</p>
                   </WishlistButton>
-                </Link>
+                </NavLink>
               </div>
         }
           <div className="videoLikeContainer">
-            <Link to="/bookmark"
-            state={{pageToShow:'bookmark'}}
+            <NavLink to="/bookmarks"
+            state={{ pageToShow: 'bookmarks' }}
             >
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
@@ -78,22 +78,21 @@ export function Filter() {
                 <MdOutlineWatchLater size="25" />
                 <p className="padding-l-1">Bookmarks</p>
               </WishlistButton>
-            </Link>
+            </NavLink>
           </div>
 
           <button
             id=""
             className="header-btn transparent-bg button-filter ButtonDomContainer  buttonHoverShadow"
           >
-            <Link
+            <NavLink
               className="headerAnchorTag flex-column-center"
-              to="./login"
-              target="iframe-main-container"
+              to='/'
             >
               <span className="button-inner-txt">
                 Post Something
               </span>
-            </Link>
+            </NavLink>
           </button>
         </form>
       </nav>

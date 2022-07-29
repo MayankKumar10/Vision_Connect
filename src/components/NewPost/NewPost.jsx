@@ -161,7 +161,7 @@ export const NewPost = ({close = null}) => {
       <div className="post-btn-container post-card-container">
         <div className="post-icon-container">
         
-        <label htmlFor="icon-button-file" >
+        {/* <label htmlFor="icon-button-file" >
           <Input accept="image/*" 
           id="icon-button-file" 
           type="file" 
@@ -180,7 +180,7 @@ export const NewPost = ({close = null}) => {
               :
               (<ImageRounded />)}
           </IconButton>
-        </label>   
+        </label>    */}
         
           <GifInput imageSelected={postImage}/>
 

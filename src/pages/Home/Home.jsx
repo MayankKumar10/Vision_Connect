@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllUsers, getPosts } from "../../Redux";
 import {Profile,Bookmark,Explore,Comments} from '..'
-import { AllPosts, Filter, NewPost } from "../../components";
+import { AllPosts, Filter, Footer, NewPost, SideNav } from "../../components";
 import { Box } from "@mui/material";
 
 export const Home = () => {
@@ -24,23 +24,16 @@ export const Home = () => {
   let location = useLocation();
   let currPage = location.state?.pageToShow;
 
-
-    const {openLikesList, likesList} = useSelector((state)=>state.posts)
-    
-    
+  const {openLikesList, likesList} = useSelector((state)=>state.posts)
+  
   return (
     <>   
       {(()=>{
-           switch (currPage) {
-            case 'profile':
-              return <Profile />;
-            case 'bookmark':
-              return  <Bookmark />;
-            case 'explore':
-              return  <Explore />;
-            case 'comment':
-              return  <Comments />;
-            default:
+           if (currPage==='profile') return <Profile />;
+            else if(currPage==='bookmarks') return  <Bookmark />;
+            else if(currPage==='explore') return  <Explore />;
+            else if(currPage==='comments') return  <Comments />;
+            else{
               return (
                 <div className="home-container post-card-container col-6">
                 <div className="home-trending">
@@ -55,6 +48,8 @@ export const Home = () => {
               )
           }
         })()}
+        <SideNav />
+      <Footer />
     </>
   )
 };

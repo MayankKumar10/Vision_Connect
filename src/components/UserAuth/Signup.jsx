@@ -120,7 +120,7 @@ const signUpHandler = async(e, userDetails) =>{
 								className="login-check formInput AlertError search-container"
 								type="text"
 								id=""
-								placeholder="User Name"
+								placeholder="last Name"
 								value={lastName}
 								onChange={(e)=>
 									setUserDetails((prev)=>({...prev, lastName:e.target.value}))
@@ -138,7 +138,7 @@ const signUpHandler = async(e, userDetails) =>{
 								className="login-check formInput AlertWarning search-container"
 								type="email"
 								id=""
-								placeholder="Email"
+								placeholder="email"
 								value={email}
 								onChange={(e)=>
 									setUserDetails((prev)=>({...prev, email:e.target.value}))}
@@ -149,7 +149,7 @@ const signUpHandler = async(e, userDetails) =>{
 
 						<div className="formPassword inputDomContainer formInput AlertInfo inputError flex-evenly box-shadow">
 							<i className="material-icons">
-								lock
+							person
 							</i>
 							<input
 								className="login-check formInput AlertInfo search-container"

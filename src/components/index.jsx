@@ -12,3 +12,4 @@ export {RequireAuth} from "./UserAuth/Auth/RequireAuth";
 export {NewPost} from './NewPost/NewPost';
 export {GifInput} from "./NewPost/GifInput";
 export {AllPosts} from './AllPosts/AllPosts';
+export {ErrorPage} from './ErrorPage/ErrorPage';

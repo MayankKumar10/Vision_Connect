@@ -140,6 +140,16 @@ export function Login() {
                 </Link>
               </div>
             </div>
+            <div className="AlertDomMainContainer">
+                <input
+                  type="button"
+                  className="ButtonDomContainer col-12 descriptionOne primary-button flex-evenly buttonHoverShadow"
+                  value="Login Testing Credentials"
+                  onClick={(e)=>(loginHandler(e, {'username':'adarshbalika', 'password':'adarshBalika123'}),
+                  navigate('/')
+                  )}
+                />
+              </div>
           </div>
         </form>
       </div>

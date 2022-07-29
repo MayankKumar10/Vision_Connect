@@ -46,7 +46,7 @@ export const Profile = () => {
 		};
 	}, [username, dispatch]);
 	
-	useEffect(() => dispatch(getUserPost({ username })), [allPosts]);
+	useEffect(() => dispatch && dispatch(getUserPost({ username })), [allPosts]);
 
   const userObj = {...userToDisplay}
 
@@ -71,9 +71,13 @@ export const Profile = () => {
   return (
     <div className="home-container post-card-container col-6">
       <div className="profile-top-txt-container">
-        <MdKeyboardBackspace size="25" />
+        <MdKeyboardBackspace size="25" onClick={() => navigate(-1)} />
         <span className="profile-top-text">
-          <h4>{`${firstName} ${lastName}`}</h4>
+          {userObj.firstName===undefined
+          ?
+          <h4>Loading</h4>
+          :<h4>{`${firstName} ${lastName}`}</h4>
+        }
             <p>{`${userPosts.length} Tweet${userPosts.length===1 ? '': 's'}`}</p>
           </span>
       </div>

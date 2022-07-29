@@ -11,7 +11,7 @@ export const Bookmark = () => {
  const {bookmarkedPosts, allPosts} = useSelector((state)=>state.posts)
  const dispatch = useDispatch();
 
- useEffect(()=> dispatch && dispatch(getBookmarks({token})),[])
+ useEffect(()=> dispatch && dispatch(getBookmarks({token})), [])
 
  const BookmarkPostsData = allPosts.filter((post)=>bookmarkedPosts.find((id)=> post._id === id)
  );
