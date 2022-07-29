@@ -35,7 +35,7 @@ export function Filter() {
           </div>
 
           <div className="videoLikeContainer">
-            <NavLink to="/explore"
+            <NavLink to="explore"
             state={{ pageToShow: 'explore' }}>
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
@@ -53,7 +53,7 @@ export function Filter() {
         {user?.username !== null &&     
             <div className="videoLikeContainer">
                 <NavLink 
-                to={`/profile/${user?.username}`} 
+                to={`profile/${user?.username}`} 
                 state={{ pageToShow: `profile` }}>
                   <WishlistButton
                     className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
@@ -67,7 +67,7 @@ export function Filter() {
               </div>
         }
           <div className="videoLikeContainer">
-            <NavLink to="/bookmarks"
+            <NavLink to="bookmarks"
             state={{ pageToShow: 'bookmarks' }}
             >
               <WishlistButton

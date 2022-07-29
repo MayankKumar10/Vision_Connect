@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../../styles/root.css";
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import {Link, useNavigate, useParams} from "react-router-dom";
+import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 import {MdKeyboardBackspace} from "react-icons/md";
 import {
   MdLocationOn,
@@ -12,7 +12,7 @@ import {
 } from "react-icons/io5";
 import {UserPostCard} from "../../components/UserPostCard/UserPostCard";
 import { useDispatch, useSelector } from "react-redux";
-import { followUser, getUserPost, getUsers, logout, resetProfile, unfollowUser, useProfile } from "../../Redux";
+import { followUser, getAllUsers, getPosts, getUserPost, getUsers, logout, resetProfile, unfollowUser, useProfile } from "../../Redux";
 import { sortByDate, userPresentFunc } from "../../helper";
 import { Box, IconButton } from "@mui/material";
 import { ProfileEditForm } from "./ProfileEditForm";
@@ -21,6 +21,7 @@ export const Profile = () => {
   const params = useParams();
   const {username} = params;
   const navigate = useNavigate();
+
   const {user:{username:usernameProfile, id}, token} = useSelector((state)=> state.auth)
 
   const dispatch = useDispatch();
@@ -35,6 +36,12 @@ export const Profile = () => {
   //     dispatch(resetProfile())
   // ,[username,allPosts,dispatch]);
 
+  let location = useLocation();
+  let currPage = location?.state?.pageToShow;
+
+  console.log('location', location)
+
+
   useEffect(() => {
 		if (dispatch) {
 			dispatch(getUsers({ username }));
@@ -47,6 +54,7 @@ export const Profile = () => {
 	}, [username, dispatch]);
 	
 	useEffect(() => dispatch && dispatch(getUserPost({ username })), [allPosts]);
+
 
   const userObj = {...userToDisplay}
 

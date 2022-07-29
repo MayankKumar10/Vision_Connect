@@ -17,6 +17,8 @@ import { InfiniteScrollHook } from '../../hooks';
 import ReactLoading from 'react-loading'
 import { UserPostCard } from '../../components/UserPostCard/UserPostCard';
 import { getAllUsers, getPosts } from '../../Redux';
+import { SideNav } from '../../components';
+import { useLocation } from 'react-router-dom';
 
 export const Explore = () => {
 
@@ -40,6 +42,12 @@ export const Explore = () => {
 
   console.log('LastSlice', lastSlice);
 
+  let location = useLocation();
+  let currPage = location?.state?.pageToShow;
+
+  console.log('location', location)
+
+
   return (
     <div className="home-container post-card-container col-6">
     {firstSlice.map((post)=>{
@@ -55,5 +63,7 @@ export const Explore = () => {
     }
     <div ref={oldPost} key="oldPost"></div>
     </div>
+     
+  
   )
 }

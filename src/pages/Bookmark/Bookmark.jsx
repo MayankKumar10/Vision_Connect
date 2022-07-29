@@ -2,19 +2,30 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 import { AddBookmark } from '../../assets/images'
 import { UserPostCard } from '../../components/UserPostCard/UserPostCard'
-import { getBookmarks } from '../../Redux'
+import { getAllUsers, getBookmarks, getPosts } from '../../Redux'
 
 export const Bookmark = () => {
  const {token} = useSelector((state)=>state.auth)
  const {bookmarkedPosts, allPosts} = useSelector((state)=>state.posts)
  const dispatch = useDispatch();
 
+
+
  useEffect(()=> dispatch && dispatch(getBookmarks({token})), [])
+
+ 
 
  const BookmarkPostsData = allPosts.filter((post)=>bookmarkedPosts.find((id)=> post._id === id)
  );
+
+ let location = useLocation();
+ let currPage = location?.state?.pageToShow;
+
+ console.log('location', location)
+
 
  return bookmarkedPosts?.length ===0 ? (
   <div className="home-container post-card-container col-6">
