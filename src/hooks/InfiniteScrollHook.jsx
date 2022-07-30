@@ -6,6 +6,7 @@ export const InfiniteScrollHook = ({oldPost, allPosts}) => {
  const [loading, setLoading] = useState(false);
 
  useEffect(()=>{
+  (()=>{
   const pageRef = oldPost.current;
   const handleScroll = (entries)=>{
     const target = entries[0];
@@ -24,7 +25,7 @@ export const InfiniteScrollHook = ({oldPost, allPosts}) => {
   }
   return () =>{
     observer.unobserve(pageRef);
-  }
+ }})();
  },[]);
 
  return { pageNum, loading };

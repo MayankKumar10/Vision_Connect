@@ -14,7 +14,9 @@ export const SideNav = () => {
   
   const currUser = allUsers.find((allUser)=>allUser.username === user?.username);
   
-  useEffect(()=>dispatch(getAllUsers()) ,[dispatch])
+  useEffect(()=>{
+    dispatch(getAllUsers())
+  } ,[dispatch])
 
   const SuggestedUsers = allUsers.filter((SuggestUser)=> !userPresentFunc(SuggestUser.username, currUser?.following) && user?.username !== SuggestUser.username).slice(0, 3)
   

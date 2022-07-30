@@ -74,8 +74,6 @@ export const ProfileEditForm = () => {
     p: 4,
   };
 
-  console.log('userToDisplay',userToDisplay);
-
   return (
     <Box>
         <Button variant='contained'

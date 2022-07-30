@@ -9,11 +9,13 @@ import {
   MdNotifications,
 } from "react-icons/md";
 import { useSelector } from "react-redux";
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import { useProfile } from "../../Redux";
 import {WishlistButton} from "../WishList/WishlistButton.styled";
 
 export function Filter() {
+
+const location = useLocation();
 
  const{user} = useSelector((state)=>state.auth);
  
@@ -22,10 +24,13 @@ export function Filter() {
       <nav className="filter-container col-3">
         <form className="form-container">
           <div className="videoLikeContainer filter-icons-container">
-            <NavLink to="/">
+            <NavLink  to="/"
+              state={{from: location}}
+              replace
+              >
               <WishlistButton
                 className="material-icons-text card-wishlist-icons navImage navIcons buttonHoverShadow  flex-row-center"
-                onClick=""
+                
                 value="Home"
               >
                 <MdHome size="25" />
@@ -35,7 +40,7 @@ export function Filter() {
           </div>
 
           <div className="videoLikeContainer">
-            <NavLink to="explore"
+            <NavLink to="/explore"
             state={{ pageToShow: 'explore' }}>
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
@@ -67,7 +72,7 @@ export function Filter() {
               </div>
         }
           <div className="videoLikeContainer">
-            <NavLink to="bookmarks"
+            <NavLink to="/bookmarks"
             state={{ pageToShow: 'bookmarks' }}
             >
               <WishlistButton

@@ -9,6 +9,8 @@ export {Signup} from "./UserAuth/Signup";
 export {UserAvatarCard} from './UserPostCard/UserAvatarCard'
 export {ForgotPassword} from "./UserAuth/ForgotPassword";
 export {RequireAuth} from "./UserAuth/Auth/RequireAuth";
+export {RestrictAuth} from "./UserAuth/Auth/RestrictAuth";
+export {LandingPage} from './UserAuth/LandingPage';
 export {NewPost} from './NewPost/NewPost';
 export {GifInput} from "./NewPost/GifInput";
 export {AllPosts} from './AllPosts/AllPosts';

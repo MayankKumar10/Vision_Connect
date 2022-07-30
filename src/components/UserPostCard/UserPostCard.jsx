@@ -35,7 +35,9 @@ export const UserPostCard = ({postDetails}) => {
   const [postEdited, setPostEdited] = useState({...postDetails});
   const checkInBookmarks = () => bookmarkedPosts.find((bookmarkId)=> bookmarkId === postDetails?._id);
 
-  useEffect(()=> getBookmarks(),[]) 
+  useEffect(()=> {
+    getBookmarks()
+  },[]) 
   
   const saveHandler = async()=>{
     if(postEdited.postImage === ''){

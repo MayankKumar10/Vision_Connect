@@ -40,12 +40,9 @@ export const Explore = () => {
   },[])
 
 
-  console.log('LastSlice', lastSlice);
-
   let location = useLocation();
   let currPage = location?.state?.pageToShow;
 
-  console.log('location', location)
 
 
   return (

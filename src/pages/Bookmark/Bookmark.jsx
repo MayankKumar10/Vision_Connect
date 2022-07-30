@@ -8,24 +8,21 @@ import { UserPostCard } from '../../components/UserPostCard/UserPostCard'
 import { getAllUsers, getBookmarks, getPosts } from '../../Redux'
 
 export const Bookmark = () => {
- const {token} = useSelector((state)=>state.auth)
- const {bookmarkedPosts, allPosts} = useSelector((state)=>state.posts)
- const dispatch = useDispatch();
-
-
-
- useEffect(()=> dispatch && dispatch(getBookmarks({token})), [])
-
+const dispatch = useDispatch();
+const {token} = useSelector((state)=>state.auth)
+const {bookmarkedPosts, allPosts} = useSelector((state)=>state.posts)
  
+useEffect(()=> {
+  dispatch(getBookmarks({token}))
+}, [])
 
- const BookmarkPostsData = allPosts.filter((post)=>bookmarkedPosts.find((id)=> post._id === id)
+useEffect(()=>{
+  dispatch(getAllUsers());
+  dispatch(getPosts());
+},[])
+
+const bookmarkPostsData = allPosts.filter((post)=> bookmarkedPosts.find((id)=> post._id === id)
  );
-
- let location = useLocation();
- let currPage = location?.state?.pageToShow;
-
- console.log('location', location)
-
 
  return bookmarkedPosts?.length ===0 ? (
   <div className="home-container post-card-container col-6">
@@ -36,7 +33,7 @@ export const Bookmark = () => {
   </div> 
  ) : (
   <div className="home-container post-card-container col-6">
-  {BookmarkPostsData?.map((post)=>(
+  {bookmarkPostsData?.map((post)=>(
     <Box key={post._id}>
     <UserPostCard  postDetails={post}/>
     </Box>
