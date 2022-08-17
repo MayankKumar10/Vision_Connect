@@ -16,14 +16,14 @@ import {UserPostCard} from "../../components/UserPostCard/UserPostCard";
 export const CommentCard = () => {
   return (
     <>
-      <div class="post-flex post-card-container">
+      <div className="post-flex post-card-container">
         <div className="post-card-img-text">
           <img
-            class="AvatarImage user-card-avatar box-shadow-round"
+            className="AvatarImage user-card-avatar box-shadow-round"
             src={steve}
             alt=""
             sizes=""
-            srcset=""
+            srcSet=""
           />
           <div className="postCard-text-container">
             <span className="commentCard-text">
@@ -49,7 +49,7 @@ export const CommentCard = () => {
             src={steve}
             alt=""
             sizes=""
-            srcset=""
+            srcSet=""
           />
         </div>
 

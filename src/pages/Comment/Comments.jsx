@@ -37,7 +37,7 @@ export const Comments = () => {
 
       {/* <CommentCard /> */}
 
-      {/* <div class="post-flex post-card-container">
+      {/* <div className="post-flex post-card-container">
         
         
       </div> */}

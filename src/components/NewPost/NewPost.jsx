@@ -66,26 +66,26 @@ export const NewPost = ({close = null}) => {
   // console.log('postDataImage', imageURL);
 
   return (
-    <div class="AvatarDomContainer post-card-container post-flex">
+    <div className="AvatarDomContainer post-card-container post-flex">
       <Stack spacing={2}>
       <div className="post-img-text">
         <img
-          class="AvatarImage smallAvatar box-shadow-round"
+          className="AvatarImage smallAvatar box-shadow-round"
           src={avatarURL}
           alt="avatarURL"
           sizes=""
-          srcset=""
+          srcSet=""
         />
 
         <textarea
           className="home-text"
           placeholder="What's happening?"
-          maxlength="240"
+          maxLength="240"
           value={postData.content}
           onChange={(e)=>
           setPostData((prev)=> ({ ...prev, content: e.target.value })) 
           }
-          autofocus
+          autoFocus
         />
        </div>
         {postData.postImage && (
@@ -199,7 +199,7 @@ export const NewPost = ({close = null}) => {
           sx={{backgroundColor: 'var(--color-primary)',borderRadius:'2rem'}}
           className="header-btn transparent-bg button-filter button-post buttonHoverShadow"
           onClick={(e)=>submitHandler(e)}
-          isDisabled={
+          isdisabled={()=>
             (content.trim().length === 0 && 
             postImage === '' && gifSelected === '') ||
             content.length > 240

@@ -44,7 +44,7 @@ const location = useLocation();
             state={{ pageToShow: 'explore' }}>
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
-                onClick=""
+                
                 value="Explore"
               >
                 <div className="padding-r-1">
@@ -62,7 +62,7 @@ const location = useLocation();
                 state={{ pageToShow: `profile` }}>
                   <WishlistButton
                     className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
-                    onClick=""
+                    
                     value="Profile"
                   >
                     <MdFavorite size="25" />
@@ -77,7 +77,7 @@ const location = useLocation();
             >
               <WishlistButton
                 className="material-icons-text card-wishlist-icons buttonHoverShadow navImage navIcons flex-row-center"
-                onClick=""
+                
                 value="Bookmarks"
               >
                 <MdOutlineWatchLater size="25" />

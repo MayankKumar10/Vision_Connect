@@ -37,11 +37,11 @@ export const ProfileDetail = ({user, userPostsLength}) => {
     <div className="profile-edit-container col-12">
         <div className="profile-avatar col-12">
           <img
-            class="AvatarImage profile-avatar-img box-shadow-round"
+            className="AvatarImage profile-avatar-img box-shadow-round"
             src={avatarURL}
             alt=""
             sizes=""
-            srcset=""
+            srcSet=""
           />
 
           <div className="profile-btn-container col-12">

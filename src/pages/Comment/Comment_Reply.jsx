@@ -11,22 +11,22 @@ import {steve} from "../../assets/images";
 
 export const Comment_Reply = () => {
   return (
-    <div class="AvatarDomContainer post-card-container post-flex">
+    <div className="AvatarDomContainer post-card-container post-flex">
       <div className="cmt-img-text">
         <img
-          class="AvatarImage smallAvatar box-shadow-round"
+          className="AvatarImage smallAvatar box-shadow-round"
           src={steve}
           alt=""
           sizes=""
-          srcset=""
+          srcSet=""
         />
 
         <input
           type="text"
           className="home-text"
           placeholder="What's happening?"
-          maxlength="240"
-          autofocus
+          maxLength="240"
+          autoFocus
         />
       </div>
       <div className="post-btn-container post-card-container">

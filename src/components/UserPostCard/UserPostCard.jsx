@@ -116,7 +116,7 @@ export const UserPostCard = ({postDetails}) => {
            <textarea
             className="home-text"
             placeholder="What's happening?"
-            maxlength="240"
+            maxLength="240"
             sx={{ 
               height:'200'
             }}
@@ -124,7 +124,7 @@ export const UserPostCard = ({postDetails}) => {
             onChange={(e)=>
             setPostEdited((prev)=> ({ ...prev, content: e.target.value })) 
             }
-            autofocus
+            autoFocus
           />
           <div className="post-btn-container">
            <div className="post-icon-container">
@@ -165,7 +165,7 @@ export const UserPostCard = ({postDetails}) => {
           sx={{backgroundColor: 'var(--color-primary)',borderRadius:'2rem'}}
           className="header-btn transparent-bg button-filter button-post buttonHoverShadow"
           onClick={saveHandler}
-          isDisabled={
+          disabled={ 
             (postEdited?.content.length === 0 && 
               postEdited?.postImage === '' && postEdited?.gifSelected === '')
             }

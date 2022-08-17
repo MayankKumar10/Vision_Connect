@@ -121,34 +121,31 @@ export function Login() {
               </span>
             </section>
 
-            <div className="formButtonContainer padding-normal margin-normal-left1 flex-evenly">
+            <div className="formButtonContainer padding-normal margin-normal-left1 ">
               <div className="AlertDomMainContainer">
                 <input
                   type="submit"
-                  className="ButtonDomContainer descriptionOne primary-button flex-evenly buttonHoverShadow"
+                  className="ButtonDomContainer descriptionOne primary-button col-12 buttonHoverShadow"
                   value="Sign In"
                 />
               </div>
 
               <div className="AlertDomMainContainer">
-                <Link to="/signup">
-                  <input
-                    type="button"
-                    className="ButtonDomContainer descriptionOne primary-button flex-evenly buttonHoverShadow"
-                    value="Sign Up"
-                  />
-                </Link>
+              <input
+                  type="button"
+                  className="ButtonDomContainer descriptionOne primary-button buttonHoverShadow
+                  col-12"
+                  value="Test Login"
+                  onClick={(e)=>(loginHandler(e, {username:'adarshbalika', password:'adarshBalika123'}
+                  ),
+                  navigate('/'))}
+                />  
               </div>
             </div>
-            <div className="AlertDomMainContainer">
-                <input
-                  type="button"
-                  className="ButtonDomContainer col-12 descriptionOne primary-button flex-evenly buttonHoverShadow"
-                  value="Login Testing Credentials"
-                  onClick={(e)=>(loginHandler(e, {'username':'adarshbalika', 'password':'adarshBalika123'}),
-                  navigate('/')
-                  )}
-                />
+            <div className="AlertDomMainContainer padding-normal">
+            <Link to="/signup">
+            <h4>create a account ?</h4>
+            </Link>
               </div>
           </div>
         </form>

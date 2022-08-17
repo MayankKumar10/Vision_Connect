@@ -17,11 +17,11 @@ export const AvatarUsernameCard = ({username}) => {
   return (
     <div className="post-card-avatar">
           <img
-            class="AvatarImage user-card-avatar box-shadow-round"
+            className="AvatarImage user-card-avatar box-shadow-round"
             src={foundUser?.avatarURL}
             alt=""
             sizes=""
-            srcset=""
+            srcSet=""
           />
           <div className="postCard-text-container">
             <span className="postCard-text">

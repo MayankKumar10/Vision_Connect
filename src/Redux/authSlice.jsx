@@ -57,7 +57,7 @@ export const signupUser = createAsyncThunk(
     logout: () => {
       localStorage.clear()
       console.log("logout");
-      //Toast('Logged Out Successful')
+    //  toast.success('Logged Out Successful')
     },
   },
 

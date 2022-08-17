@@ -72,14 +72,14 @@ export const Profile = () => {
             <p>{`${userPosts.length} Tweet${userPosts.length===1 ? '': 's'}`}</p>
           </span>
       </div>
-      <div class="AvatarDomContainer post-card-container post-flex">
+      <div className="AvatarDomContainer post-card-container post-flex">
         <div className="profile-img-container">
           <img
-            class="Profile-main-img  "
+            className="Profile-main-img  "
             src={backgroundURL}
             alt=""
             sizes=""
-            srcset=""
+            srcSet=""
           />
         </div>
       </div>
